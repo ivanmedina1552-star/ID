@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consulta de opinión — Demo</title>
+<style>
+  :root { --gold:#c89b6a; --gold-dark:#b77b3e; --navy:#183b63; --paper:#f7f4f1; }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; color:#172b43; font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(#faf9f8,#f0e9e2); min-height:100vh;
+  }
+  .top { display:flex; justify-content:center; padding:0 16px 26px; }
+  .brand {
+    margin-top:0; padding:9px 18px; background:#fff; text-align:center;
+    color:#7d4b27; font-weight:700; letter-spacing:.3px;
+    border-bottom:1px solid #e7d5c2; min-width:320px;
+  }
+  .brand .main { font-family:Georgia,serif; font-size:22px; color:#9e1b32; }
+  .brand .sub { font-size:8px; color:#72533b; letter-spacing:.6px; }
+  .brand .sat { margin-left:12px; color:#244b65; font-size:17px; }
+  .demo { margin:0 auto 18px; width:max-content; max-width:calc(100% - 32px);
+    background:#fff4d7; border:1px solid #d4a75b; color:#67481e; padding:8px 14px;
+    border-radius:5px; font-size:12px; font-weight:700; text-align:center; }
+  .notice {
+    width:min(730px, calc(100% - 44px)); margin:20px 22px 32px;
+    padding:20px 16px; border:1px solid var(--gold-dark); border-radius:10px;
+    background:#f5eee7; box-shadow:0 3px 4px #0002;
+  }
+  .notice-inner { display:flex; align-items:center; gap:16px; padding:11px 12px;
+    border-radius:9px; background:#c9a078; color:#111; }
+  .info { display:grid; place-items:center; flex:0 0 23px; height:23px; border-radius:50%;
+    color:white; background:#65a9e8; font-weight:bold; box-shadow:inset 0 1px 2px #fff8; }
+  .panel { margin:0 7px 16px; border:1px solid var(--gold-dark); border-radius:9px;
+    overflow:hidden; background:#f7f2ed; box-shadow:0 3px 3px #0002; }
+  .panel-title { padding:8px 16px; background:linear-gradient(#ead7c2,#b98959);
+    border-bottom:1px solid #c28b54; color:#233b55; font-size:15px; }
+  .details { padding:16px 28px 28px; min-height:160px; }
+  .line { display:grid; grid-template-columns:90px minmax(0,1fr); gap:14px;
+    max-width:440px; margin:3px 0; line-height:1.45; }
+  .label { text-align:right; color:#1c2c40; }
+  .value { color:#244565; overflow-wrap:anywhere; }
+  footer { padding:14px; text-align:center; color:#7c756e; font-size:11px; }
+  @media (max-width:600px) {
+    .notice { width:calc(100% - 24px); margin:18px 12px 24px; }
+    .notice-inner { align-items:flex-start; font-size:14px; }
+    .panel { margin-left:5px; margin-right:5px; }
+    .details { padding:15px 12px 22px; }
+    .line { grid-template-columns:76px minmax(0,1fr); gap:9px; font-size:14px; }
+  }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="brand" aria-label="Encabezado de demostración">
+      <span class="main">HACIENDA</span>
+      <span class="sub"> · L</span>
+      <span class="sat"> SAT</span>
+      <div class="sub">SECRETARIÍA DE HACIENDA Y CRÉDITO PÚBLICO</div>
+    </div>
+  </header>
+
+
+
+  <section class="notice" aria-label="Aviso">
+    <div class="notice-inner">
+      <span class="info" aria-hidden="true">i</span>
+      <span>La Opinión que verificó fue emitida por el 
+      Servicio de Administración tributaria .</span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-title">Datos Generales Enviados</div>
+    <div class="details">
+      <div class="line"><span class="label">Folio:</span><span class="value">26NN1371822</span></div>
+      <div class="line"><span class="label">RFC:</span><span class="value">SARJ680902215</span></div>
+      <div class="line"><span class="label">Fecha:</span><span class="value">19-10-2026</span></div>
+      <div class="line"><span class="label">Sentido:</span><span class="value">Positivo</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-title">Datos Generales Consultados</div>
+    <div class="details">
+<div class="line"><span class="label">Folio:</span><span class="value">26NN1371822</span></div>
+      <div class="line"><span class="label">RFC:</span><span class="value">SARJ680902215</span></div>
+      <div class="line"><span class="label">Fecha:</span><span class="value">19-10-2026</span></div>
+      <div class="line"><span class="label">Sentido:</span><span class="value">Positivo</span></div>
+    </div>
+  </section>
+</body>
+</html>
